@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../Fonts/Ionicons.ttf">
+   </FileRef>
+   <FileRef
       location = "group:InterviewProject.xcodeproj">
    </FileRef>
    <FileRef
