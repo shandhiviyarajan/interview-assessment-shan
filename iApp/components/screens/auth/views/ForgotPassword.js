@@ -1,9 +1,10 @@
-/**
- * @format
- */
+import React from 'react';
+const ForgotPassword = () => {
+  return (
+    <View>
+      <Text>Forgot Password Screen</Text>
+    </View>
+  );
+};
 
-import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
-
-AppRegistry.registerComponent(appName, () => App);
+export default ForgotPassword;
