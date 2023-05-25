@@ -9,7 +9,7 @@ const LoginScreen = () => {
   const token = useAuthToken();
   return (
     <View>
-      <Text>Login Screen</Text>
+      <Text>Login Screen {token}</Text>
     </View>
   );
 };
