@@ -1,9 +1,13 @@
 import React from 'react';
 
-import { createStackNavigator } from '@react-navigation/stack';
+import {
+  ForgotPassword,
+  LoginScreen,
+  RegisterScreen
+} from 'components/screens';
+import { AUTH_NAGINATIONS } from 'core/constants/routes';
 
-import { LoginScreen } from '../../components/screens';
-import { AUTH_NAGINATIONS } from '../constants/routes';
+import { createStackNavigator } from '@react-navigation/stack';
 const Stack = createStackNavigator();
 
 export const AuthStackNavigator = () => {
@@ -16,6 +20,12 @@ export const AuthStackNavigator = () => {
       ) : (
         <>
           <Stack.Screen name={AUTH_NAGINATIONS.LOGIN} component={LoginScreen} options={{ headerShown: false }} />
+          <Stack.Screen name={AUTH_NAGINATIONS.REGISTER} component={RegisterScreen} options={{ headerShown: false }} />
+          <Stack.Screen
+            name={AUTH_NAGINATIONS.FORGOT_PASSWORD}
+            component={ForgotPassword}
+            options={{ headerShown: false }}
+          />
         </>
       )}
     </Stack.Navigator>
