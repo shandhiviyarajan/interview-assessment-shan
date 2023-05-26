@@ -29,8 +29,8 @@ It provides a clear and organized structure, core dependencies to open the asses
 
 You can start by cloning this repository and using [react-native-rename](https://github.com/junedomingo/react-native-rename). In the current state of this project, it should give you no issues at all, just run the script, delete your node modules and reinstall them and you should be good to go.
 
-- Clone the Repository
-- Run `yarn` to install node dependancies
+- [Clone the Repository](https://github.com/shandhiviyarajan/interview-assessment-shan)
+- Run `cd iApp` then `yarn` to install node dependancies
 - Run `cd ios && pod install` to install iOS Dependancies
 - Run in iOS simulators `yarn ios`
 - Run in Android Emulators `yarn android`
