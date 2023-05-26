@@ -1,7 +1,10 @@
 import React from 'react';
 
-import { LoginScreen } from 'components/screens';
-import { RegisterScreen } from 'components/screens/auth';
+import {
+  ForgotPassword,
+  LoginScreen,
+  RegisterScreen
+} from 'components/screens';
 import { AUTH_NAGINATIONS } from 'core/constants/routes';
 
 import { createStackNavigator } from '@react-navigation/stack';
@@ -18,6 +21,11 @@ export const AuthStackNavigator = () => {
         <>
           <Stack.Screen name={AUTH_NAGINATIONS.LOGIN} component={LoginScreen} options={{ headerShown: false }} />
           <Stack.Screen name={AUTH_NAGINATIONS.REGISTER} component={RegisterScreen} options={{ headerShown: false }} />
+          <Stack.Screen
+            name={AUTH_NAGINATIONS.FORGOT_PASSWORD}
+            component={ForgotPassword}
+            options={{ headerShown: false }}
+          />
         </>
       )}
     </Stack.Navigator>
