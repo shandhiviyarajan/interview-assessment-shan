@@ -1,6 +1,9 @@
 # React Native - Assessment Shan
+
 ## 27th May - 2023
+
 #### [prashasoft@gmail.com](mailto:prashasoft@gmail.com)
+
 #### +94 77 977 3225
 
 It provides a clear and organized structure, core dependencies to open the assessment development test.
@@ -16,12 +19,14 @@ It provides a clear and organized structure, core dependencies to open the asses
 - [Android Studio and Android SDK](https://developer.android.com/studio)
 
 ## 🍒 Base dependencies
+
 - [React Native version 0.66.1](https://reactnative.dev)
 - [react-navigation](https://reactnavigation.org/) navigation library.
 - [redux](https://redux.js.org/) for state management.
 - [redux-persist](https://github.com/rt2zz/redux-persist) as persistance layer.
 
 ## 🚀 Running the App
+
 You can start by cloning this repository and using [react-native-rename](https://github.com/junedomingo/react-native-rename). In the current state of this project, it should give you no issues at all, just run the script, delete your node modules and reinstall them and you should be good to go.
 
 - Clone the Repository
@@ -29,7 +34,6 @@ You can start by cloning this repository and using [react-native-rename](https:/
 - Run `cd ios && pod install` to install iOS Dependancies
 - Run in iOS simulators `yarn ios`
 - Run in Android Emulators `yarn android`
-
 
 ## Folder structure
 
@@ -64,6 +68,3 @@ STG: Not available
 PROD: Not available
 
 ## Generate production version
-
-
-
