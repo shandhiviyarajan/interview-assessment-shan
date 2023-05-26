@@ -2,16 +2,19 @@ import React from 'react';
 
 import { TAB_NAVIGATIONS } from 'core/constants/routes';
 import { LinkNavigate } from 'core/utils/helper';
-import { Text, View } from 'react-native';
+import {
+  Text,
+  View
+} from 'react-native';
 
 import { Link } from '@react-navigation/native';
-const CartPage = () => {
+const ProductsPage = () => {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Cart Page</Text>
-      <Link to={LinkNavigate(TAB_NAVIGATIONS.CHECKOUT, {})}>Check out</Link>
+      <Text>Products Page</Text>
+      <Link to={LinkNavigate(TAB_NAVIGATIONS.SINGLE_PRODUCT, {})}>Single Product</Link>
     </View>
   );
 };
 
-export default CartPage;
+export default ProductsPage;

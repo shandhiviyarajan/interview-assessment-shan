@@ -1,15 +1,3 @@
-import React from 'react';
-
-import {
-  Text,
-  View
-} from 'react-native';
-const ProductsPage = () => {
-  return (
-    <View>
-      <Text>Products Page</Text>
-    </View>
-  );
-};
-
-export default ProductsPage;
+import ProductsPage from './product';
+import SingleProductPage from './single_product';
+export { ProductsPage, SingleProductPage };

@@ -1,19 +1,12 @@
 import React from 'react';
 
-import {
-  ForgotPassword,
-  LoginScreen,
-  RegisterScreen,
-  SingleProductPage
-} from 'components/screens';
-import {
-  AUTH_NAGINATIONS,
-  TAB_NAVIGATIONS
-} from 'core/constants/routes';
+import { ForgotPassword, LoginScreen, RegisterScreen } from 'components/screens';
+import CheckoutPage from 'components/screens/cart/checkout';
+import { AUTH_NAGINATIONS, TAB_NAVIGATIONS } from 'core/constants/routes';
 
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { AppStackNavigator } from './AppStackNavigator';
+import { AppTabNavigator } from './AppTabNavigator';
 const Stack = createStackNavigator();
 
 export const AuthStackNavigator = () => {
@@ -23,15 +16,11 @@ export const AuthStackNavigator = () => {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       {accessToken ? (
         <>
+          <Stack.Screen name={TAB_NAVIGATIONS.NAME} component={AppTabNavigator} options={{ headerShown: false }} />
           <Stack.Screen
-            name={TAB_NAVIGATIONS.PRODUCTS}
-            component={AppStackNavigator}
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name={TAB_NAVIGATIONS.SINGLE_PRODUCT}
-            component={SingleProductPage}
-            options={{ headerShown: false }}
+            name={TAB_NAVIGATIONS.CHECKOUT}
+            component={CheckoutPage}
+            options={{ headerShown: true, headerBackTitleVisible: false }}
           />
         </>
       ) : (
