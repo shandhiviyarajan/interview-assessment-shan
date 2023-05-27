@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useAppTheme } from 'core/theme';
 import { View } from 'react-native';
-function Wrapper({
+export const Wrapper = ({
   children,
   flex = 1,
   justifyContent = 'flex-start',
@@ -12,7 +12,7 @@ function Wrapper({
   padding,
   style,
   ...rest
-}) {
+}) => {
   const theme = useAppTheme();
   return (
     <View
@@ -30,6 +30,4 @@ function Wrapper({
       {children}
     </View>
   );
-}
-
-export default Wrapper;
+};

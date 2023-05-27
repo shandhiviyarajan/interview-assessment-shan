@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { View } from 'react-native';
-const Box = ({
+export const Box = ({
   children,
   width = '100%',
   flex = 0,
@@ -49,5 +49,3 @@ const Box = ({
     </View>
   );
 };
-
-export default Box;

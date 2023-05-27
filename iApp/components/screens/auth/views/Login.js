@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { Box, Button, InputText, Text, Wrapper } from 'components/atoms';
-import Spacer from 'components/atoms/Spacer';
+import { Box, Button, InputText, Spacer, Text, Wrapper } from 'components/atoms';
 import { AUTH_NAGINATIONS } from 'core/constants/routes';
 import { useAuthToken } from 'core/hooks';
 import { apiLogin } from 'core/services';
@@ -34,7 +33,7 @@ const LoginScreen = () => {
     >
       <Wrapper alignItems="center" justifyContent="center" padding={36}>
         <Text fontSize={theme.FontSize.h2}>Login {token}</Text>
-        <Spacer space={16} />
+        <Spacer space={12} />
         <Box mb={16}>
           <InputText placeholder="Username" value={payload.username} />
         </Box>

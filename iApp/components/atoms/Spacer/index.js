@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useAppTheme } from 'core/theme';
 import { View } from 'react-native';
-const Spacer = ({ space }) => {
+export const Spacer = ({ space }) => {
   const theme = useAppTheme();
   return (
     <View
@@ -12,5 +12,3 @@ const Spacer = ({ space }) => {
     ></View>
   );
 };
-
-export default Spacer;
