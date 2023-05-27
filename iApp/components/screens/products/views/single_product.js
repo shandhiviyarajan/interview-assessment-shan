@@ -1,14 +1,12 @@
 import React from 'react';
 
-import {
-  Text,
-  View
-} from 'react-native';
+import { Wrapper } from 'components/atoms';
+import { ProductSlider } from 'components/molecules/productSlider';
 function SingleProductPage() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Single Product Page</Text>
-    </View>
+    <Wrapper justifyContent="center" alignItems="center">
+      <ProductSlider />
+    </Wrapper>
   );
 }
 

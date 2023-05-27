@@ -11,12 +11,12 @@ export const ProductItem = () => {
   const theme = useAppTheme();
   const linkTo = useLinkTo();
   return (
-    <Box pb={24}>
-      <TouchableOpacity
-        onPress={() => {
-          linkTo(`/${TAB_NAVIGATIONS.SINGLE_PRODUCT}`);
-        }}
-      >
+    <TouchableOpacity
+      onPress={() => {
+        linkTo(`/${TAB_NAVIGATIONS.SINGLE_PRODUCT}`);
+      }}
+    >
+      <Box pb={24}>
         <Text color={theme.Colors.Dark} fontSize={theme.FontSize.h2}>
           iPhone 9
         </Text>
@@ -29,7 +29,7 @@ export const ProductItem = () => {
           }}
           resizeMode={FastImage.resizeMode.cover}
         />
-      </TouchableOpacity>
-    </Box>
+      </Box>
+    </TouchableOpacity>
   );
 };
