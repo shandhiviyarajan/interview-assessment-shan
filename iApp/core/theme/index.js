@@ -11,7 +11,8 @@ const ColorsLight = {
   Success: '#FE3B47',
   Warning: '#FFBB0D',
   Error: '#FE3B47',
-  Light: '#ffffff'
+  Light: '#ffffff',
+  ErrorLight: '#FF747C'
 };
 
 const ColorsDark = {
@@ -37,8 +38,8 @@ const FontSize = {
   h4: 16,
   h5: 14,
   h6: 10,
-  xs: 6,
-  sm: 10,
+  xs: 12,
+  sm: 14,
   md: 16,
   lg: 24,
   xl: 32,

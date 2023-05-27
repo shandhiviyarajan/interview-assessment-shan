@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Box, Button, InputText, Spacer, Text, Wrapper } from 'components/atoms';
+import { AlertMessage } from 'components/molecules';
 import { AUTH_NAGINATIONS } from 'core/constants/routes';
 import { useAuthToken } from 'core/hooks';
 import { apiLogin } from 'core/services';
@@ -32,6 +33,7 @@ const LoginScreen = () => {
       }}
     >
       <Wrapper alignItems="center" justifyContent="center" padding={36}>
+        <AlertMessage title="Welcome" message="Welcome to login page" />
         <Text fontSize={theme.FontSize.h2}>Login {token}</Text>
         <Spacer space={12} />
         <Box mb={16}>

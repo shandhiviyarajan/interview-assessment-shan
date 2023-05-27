@@ -10,11 +10,13 @@ export const Text = ({
   fontSize,
   color,
   fontWeight,
-  margin,
   marginTop,
   marginLeft,
   marginRight,
   marginBottom,
+  paddingBottom,
+  paddingLeft,
+  paddingRight,
   lineHeight,
   fontStyle,
   alignItems,
@@ -32,8 +34,7 @@ export const Text = ({
         ...styles.container,
         alignItems,
         justifyContent,
-        flex,
-        ...Mystyles
+        flex
       }}
     >
       <TextElement
@@ -42,7 +43,9 @@ export const Text = ({
           fontSize: fontSize || theme.FontSize.md,
           fontWeight,
           color: color || theme.Colors.Dark,
-          margin,
+          paddingBottom,
+          paddingLeft,
+          paddingRight,
           marginTop,
           marginLeft,
           marginRight,
@@ -50,7 +53,8 @@ export const Text = ({
           lineHeight,
           fontStyle,
           textAlign,
-          opacity
+          opacity,
+          ...styles
         }}
       >
         {children}
@@ -81,5 +85,5 @@ Text.propTypes = {
 
 Text.defaultProps = {
   fontWeight: '500',
-  lineHeight: 44
+  lineHeight: 0
 };
