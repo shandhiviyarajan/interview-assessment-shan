@@ -40,7 +40,7 @@ export const Text = ({
       <TextElement
         numberOfLines={numberOfLines}
         style={{
-          fontSize: fontSize || theme.FontSize.md,
+          fontSize: fontSize || theme.FontSize.sm,
           fontWeight,
           color: color || theme.Colors.Dark,
           paddingBottom,

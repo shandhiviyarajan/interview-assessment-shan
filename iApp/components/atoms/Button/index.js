@@ -23,7 +23,7 @@ export const Button = ({
   marginLeft,
   borderColor,
   borderWidth,
-  Mystyles
+  style
 }) => {
   const theme = useAppTheme();
   console.log(theme);
@@ -48,7 +48,7 @@ export const Button = ({
         marginVertical,
         borderColor,
         borderWidth,
-        ...Mystyles
+        ...style
       }}
     >
       {children}

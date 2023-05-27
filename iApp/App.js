@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { ThemeProvider } from 'core/theme';
+import FlashMessage from 'react-native-flash-message';
 
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -9,6 +10,7 @@ function App() {
   return (
     <NavigationContainer>
       <ThemeProvider>
+        <FlashMessage position="top" />
         <AuthStackNavigator />
       </ThemeProvider>
     </NavigationContainer>

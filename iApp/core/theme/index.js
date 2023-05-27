@@ -3,7 +3,7 @@ import React, { createContext, useContext } from 'react';
 import { useColorScheme } from 'react-native';
 const ColorsLight = {
   Primary: '#A23CE1',
-  Secondary: '#C3D8FF',
+  Secondary: '#EAC8FF',
   Grey: '#C5C5C5',
   LightGrey: '#E6E6E6',
   Dark: '#2E2E2E',
@@ -22,8 +22,8 @@ const ColorsDark = {
 };
 
 const Gutters = {
-  Padding: 8,
-  Margin: 8,
+  Padding: 10,
+  Margin: 10,
   sm: 8,
   md: 12,
   lg: 18,

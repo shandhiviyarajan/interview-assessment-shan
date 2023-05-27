@@ -1,16 +1,17 @@
 import React from 'react';
 
-import { Box, Button, InputText, Spacer, Text, Wrapper } from 'components/atoms';
-import { AlertMessage } from 'components/molecules';
+import { Box, Button, InputText, NavLink, Spacer, Text, Wrapper } from 'components/atoms';
 import { AUTH_NAGINATIONS } from 'core/constants/routes';
 import { useAuthToken } from 'core/hooks';
 import { apiLogin } from 'core/services';
 import { useAppTheme } from 'core/theme';
 import { LinkNavigate } from 'core/utils/helper';
 import { KeyboardAvoidingView, Platform } from 'react-native';
-
-import { Link } from '@react-navigation/native';
 const LoginScreen = () => {
+  //app theme
+  const theme = useAppTheme();
+  const { Colors } = theme;
+  //token
   const token = useAuthToken();
 
   const [payload, setPayload] = React.useState({
@@ -24,7 +25,6 @@ const LoginScreen = () => {
     });
   };
 
-  const theme = useAppTheme();
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -33,7 +33,6 @@ const LoginScreen = () => {
       }}
     >
       <Wrapper alignItems="center" justifyContent="center" padding={36}>
-        <AlertMessage title="Welcome" message="Welcome to login page" />
         <Text fontSize={theme.FontSize.h2}>Login {token}</Text>
         <Spacer space={12} />
         <Box mb={16}>
@@ -45,8 +44,15 @@ const LoginScreen = () => {
         <Button width="100%" height={44}>
           <Text color="#fff">Login</Text>
         </Button>
+        <Spacer space={10} />
+        <Text color={Colors.Dark}>Don't have an account ?</Text>
+        <Spacer space={10} />
+
+        <Button width="100%" height={44} backgroundColor={Colors.Secondary}>
+          <Text color={Colors.Primary}>Register</Text>
+        </Button>
         <Spacer />
-        <Link to={LinkNavigate(AUTH_NAGINATIONS.REGISTER, {})}>Register</Link>
+        <NavLink to={LinkNavigate(AUTH_NAGINATIONS.REGISTER, {})}>Forgot Password ?</NavLink>
       </Wrapper>
     </KeyboardAvoidingView>
   );

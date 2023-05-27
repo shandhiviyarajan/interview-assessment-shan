@@ -51,7 +51,7 @@ export const InputText = ({
         marginHorizontal,
         padding: theme.Gutters.md,
         borderRadius: theme.Radius.sm,
-        borderColor: theme.Colors.Grey,
+        borderColor: theme.Colors.LightGrey,
         shadowColor: theme.Colors.Dark,
         backgroundColor: theme.Colors.Light,
         width,
@@ -59,7 +59,7 @@ export const InputText = ({
         marginBottom,
         marginLeft,
         marginRight,
-        borderWidth
+        borderWidth: borderWidth ? borderWidth : 2
       }}
       ref={compRef}
       secureTextEntry={secureTextEntry}
@@ -122,7 +122,6 @@ TextInput.defaultProps = {
   fontWeight: '500',
   fontStyle: 'normal',
   marginVertical: 0,
-  borderWidth: 1,
   align: 'left',
   value: '',
   placeholder: 'Placeholder',

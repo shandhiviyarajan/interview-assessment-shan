@@ -12,7 +12,9 @@ export const AlertMessage = ({ type = 'default', title, message }) => {
         paddingTop: 12,
         paddingLeft: 12,
         paddingRight: 12,
-        borderRadius: 8
+        borderRadius: 8,
+        position: 'absolute',
+        top: 96
       }}
     >
       {title && (
