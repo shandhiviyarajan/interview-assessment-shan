@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useAppTheme } from 'core/theme';
 import PropTypes from 'prop-types';
-import { TextInput as InputElement } from 'react-native';
+import { TextInput } from 'react-native';
 export const InputText = ({
   props,
   stylesProps,
@@ -39,7 +39,7 @@ export const InputText = ({
 }) => {
   const theme = useAppTheme();
   return (
-    <InputElement
+    <TextInput
       style={{
         ...stylesProps,
         fontSize: theme.FontSize.md,

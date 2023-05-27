@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { useAppTheme } from 'core/theme';
 import PropTypes from 'prop-types';
 import { Text as TextElement, View } from 'react-native';
 
@@ -24,6 +25,7 @@ export const Text = ({
   opacity,
   Mystyles
 }) => {
+  const theme = useAppTheme();
   return (
     <View
       style={{
@@ -39,7 +41,7 @@ export const Text = ({
         style={{
           fontSize,
           fontWeight,
-          color,
+          color: theme.Colors.Dark,
           margin,
           marginTop,
           marginLeft,
@@ -79,7 +81,6 @@ Text.propTypes = {
 
 Text.defaultProps = {
   fontSize: 22,
-  color: colors.black,
   fontWeight: 'normal',
   lineHeight: 54
 };
