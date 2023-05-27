@@ -1,11 +1,14 @@
 import React from 'react';
 
-import { Text, View } from 'react-native';
+import { Text, Wrapper } from 'components/atoms';
+
+import { useRoute } from '@react-navigation/native';
 const CartPage = () => {
+  const route = useRoute();
   return (
-    <View>
-      <Text>Cart Page</Text>
-    </View>
+    <Wrapper>
+      <Text>{JSON.stringify(route)}</Text>
+    </Wrapper>
   );
 };
 

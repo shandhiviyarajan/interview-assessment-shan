@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { AUTH_NAVIGATIONS, TAB_NAVIGATIONS } from 'core/constants/routes';
-import { ForgotPassword, LoginScreen, RegisterScreen } from 'screens';
+import { CartPage, CheckoutPage, ForgotPassword, LoginScreen, RegisterScreen } from 'screens';
 
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -16,11 +16,12 @@ export const AuthStackNavigator = () => {
       {accessToken ? (
         <>
           <Stack.Screen name={TAB_NAVIGATIONS.NAME} component={AppTabNavigator} options={{ headerShown: false }} />
-          {/* <Stack.Screen
+          <Stack.Screen name={TAB_NAVIGATIONS.CART + 'X'} component={CartPage} options={{ headerShown: false }} />
+          <Stack.Screen
             name={TAB_NAVIGATIONS.CHECKOUT}
             component={CheckoutPage}
             options={{ headerShown: true, headerBackTitleVisible: false }}
-          /> */}
+          />
         </>
       ) : (
         <>

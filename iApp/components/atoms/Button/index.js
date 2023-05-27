@@ -4,9 +4,8 @@ import { useAppTheme } from 'core/theme';
 import PropTypes from 'prop-types';
 import { TouchableOpacity } from 'react-native';
 export const Button = ({
-  testID,
   children,
-  onClick,
+  onPress,
   display,
   justifyContent,
   alignItems,
@@ -29,8 +28,7 @@ export const Button = ({
   console.log(theme);
   return (
     <TouchableOpacity
-      testID={testID}
-      onPress={onClick}
+      onPress={onPress}
       disabled={disabled}
       style={{
         display,

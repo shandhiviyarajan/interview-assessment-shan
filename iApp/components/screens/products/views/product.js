@@ -6,7 +6,7 @@ import { useAppTheme } from 'core/theme';
 const ProductsPage = () => {
   const { Gutters } = useAppTheme();
   return (
-    <Wrapper justifyContent="flex-start" alignItems="flex-start" paddingH={Gutters.xl}>
+    <Wrapper paddingH={Gutters.xl}>
       <ProductsList />
     </Wrapper>
   );
