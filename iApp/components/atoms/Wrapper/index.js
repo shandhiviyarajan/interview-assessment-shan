@@ -10,6 +10,7 @@ export const Wrapper = ({
   alignContent = 'flex-start',
   backgroundColor,
   padding,
+  paddingH,
   style,
   ...rest
 }) => {
@@ -23,6 +24,7 @@ export const Wrapper = ({
         alignItems,
         flex,
         padding,
+        paddingHorizontal: paddingH,
         backgroundColor: backgroundColor ? backgroundColor : theme.Colors.Light,
         ...style
       }}
