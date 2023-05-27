@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { AddIcon } from 'components/icons';
-import { CartPage, ProfilePage } from 'components/screens';
 import { TAB_NAVIGATIONS } from 'core/constants/routes';
 import { Host } from 'react-native-portalize';
+import { CartPage, ProfilePage } from 'screens';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 

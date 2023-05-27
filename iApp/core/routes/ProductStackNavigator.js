@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { ProductsPage, SingleProductPage } from 'components/screens';
 import { TAB_NAVIGATIONS } from 'core/constants/routes';
+import { ProductsPage, SingleProductPage } from 'screens';
 
 import { createStackNavigator } from '@react-navigation/stack';
 const Stack = createStackNavigator();
