@@ -1,17 +1,11 @@
 import React from 'react';
 
+import { Button } from 'components/atoms/Button';
 import { AUTH_NAGINATIONS } from 'core/constants/routes';
 import { useAuthToken } from 'core/hooks';
 import { apiLogin } from 'core/services';
 import { LinkNavigate } from 'core/utils/helper';
-import {
-  Button,
-  KeyboardAvoidingView,
-  Platform,
-  Text,
-  TextInput,
-  View
-} from 'react-native';
+import { KeyboardAvoidingView, Platform, Text, TextInput, View } from 'react-native';
 
 import { Link } from '@react-navigation/native';
 const LoginScreen = () => {
@@ -66,7 +60,7 @@ const LoginScreen = () => {
             paddingLeft: 12
           }}
         />
-        <Button title="Login" onPress={submitLogin} />
+        <Button>Login</Button>
       </View>
     </KeyboardAvoidingView>
   );
