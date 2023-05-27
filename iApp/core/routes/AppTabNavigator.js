@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AddIcon } from 'components/icons';
+import { IconAdd } from 'components/icons';
 import { TAB_NAVIGATIONS } from 'core/constants/routes';
 import { Host } from 'react-native-portalize';
 import { CartPage, ProfilePage } from 'screens';
@@ -24,7 +24,7 @@ export const AppTabNavigator = () => {
           name={TAB_NAVIGATIONS.PRODUCTS}
           component={ProductStackNavigator}
           options={({ route, focused }) => ({
-            tabBarIcon: () => <AddIcon />,
+            tabBarIcon: () => <IconAdd />,
             headerShown: false
           })}
         />
@@ -32,14 +32,14 @@ export const AppTabNavigator = () => {
           name={TAB_NAVIGATIONS.CART}
           component={CartPage}
           options={({ focused }) => ({
-            tabBarIcon: () => <AddIcon />
+            tabBarIcon: () => <IconAdd />
           })}
         />
         <Tab.Screen
           name={TAB_NAVIGATIONS.PROFILE}
           component={ProfilePage}
           options={({ focused }) => ({
-            tabBarIcon: () => <AddIcon />
+            tabBarIcon: () => <IconAdd />
           })}
         />
       </Tab.Navigator>

@@ -3,4 +3,4 @@ function IconProfile() {
   return <></>;
 }
 
-export default IconCart;
+export default IconProfile;

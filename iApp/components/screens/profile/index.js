@@ -1,1 +1,2 @@
-export { ProfilePage } from './views/profile';
+import ProfilePage from './views/profile';
+export { ProfilePage };

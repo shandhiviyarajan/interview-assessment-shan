@@ -1,3 +1,4 @@
-export { CartPage } from './views/cart';
-export { CheckoutPage } from './views/checkout';
-export { CheckoutSuccess } from './views/checkoutSuccess';
+import CartPage from './views/cart';
+import CheckoutPage from './views/checkout';
+import CheckoutSuccess from './views/checkoutSuccess';
+export { CartPage, CheckoutPage, CheckoutSuccess };
