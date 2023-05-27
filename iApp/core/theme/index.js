@@ -1,46 +1,6 @@
-import React, { createContext, useContext, useState } from 'react';
-//ThemeContext
-const ThemeContext = createContext();
+import React, { createContext, useContext } from 'react';
 
-//Custom hook
-export function useAppTheme() {
-  return useContext(ThemeContext);
-}
-//Theme provider
-export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState('light'); // Initial theme state
-
-  // func toggle theme
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
-  };
-
-  //colours variations
-  const Colors = theme === 'light' ? ColorsLight : ColorsDark;
-  const value = {
-    theme,
-    toggleTheme,
-    ...Colors,
-    ...Gutters,
-    FontSize,
-    Radius
-  };
-
-  return <ThemeContext.Provider theme={value}>{children}</ThemeContext.Provider>;
-}
-
-// Usage in your app
-function App() {
-  const { theme, toggleTheme } = useAppTheme();
-
-  return (
-    <div className={`app ${theme}`}>
-      <h1>My App</h1>
-      <button onClick={toggleTheme}>Toggle Theme</button>
-      {/* Rest of your app */}
-    </div>
-  );
-}
+import { useColorScheme } from 'react-native';
 const ColorsLight = {
   Primary: '#2E71F2',
   Secondary: '#C3D8FF',
@@ -92,3 +52,23 @@ const Radius = {
   xl: 24,
   xxl: 30
 };
+//ThemeContext
+const ThemeContext = createContext();
+//Custom hook
+const useAppTheme = () => {
+  return useContext(ThemeContext);
+};
+
+//Theme provider
+const ThemeProvider = ({ children }) => {
+  const colorScheme = useColorScheme();
+  const [theme, setTheme] = React.useState({
+    Colors: colorScheme === 'light' ? ColorsLight : ColorsDark,
+    Gutters,
+    FontSize,
+    Radius
+  });
+  return <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>;
+};
+
+export { ThemeProvider, useAppTheme };

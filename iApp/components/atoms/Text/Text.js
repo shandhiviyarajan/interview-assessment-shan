@@ -1,10 +1,9 @@
 import React from 'react';
-import {Text as TextElement, View} from 'react-native';
+
 import PropTypes from 'prop-types';
+import { Text as TextElement, View } from 'react-native';
 
-import {styles} from './Text.style';
-import {colors} from '../../constants/colors';
-
+import { styles } from './Text.style';
 export const Text = ({
   children,
   fontSize,
@@ -23,7 +22,7 @@ export const Text = ({
   flex,
   numberOfLines,
   opacity,
-  Mystyles,
+  Mystyles
 }) => {
   return (
     <View
@@ -32,8 +31,9 @@ export const Text = ({
         alignItems,
         justifyContent,
         flex,
-        ...Mystyles,
-      }}>
+        ...Mystyles
+      }}
+    >
       <TextElement
         numberOfLines={numberOfLines}
         style={{
@@ -48,8 +48,9 @@ export const Text = ({
           lineHeight,
           fontStyle,
           textAlign,
-          opacity,
-        }}>
+          opacity
+        }}
+      >
         {children}
       </TextElement>
     </View>
@@ -73,12 +74,12 @@ Text.propTypes = {
   textAlign: PropTypes.string,
   flex: PropTypes.number,
   numberOfLines: PropTypes.number,
-  opacity: PropTypes.number,
+  opacity: PropTypes.number
 };
 
 Text.defaultProps = {
   fontSize: 22,
   color: colors.black,
   fontWeight: 'normal',
-  lineHeight: 54,
+  lineHeight: 54
 };

@@ -60,7 +60,9 @@ const LoginScreen = () => {
             paddingLeft: 12
           }}
         />
-        <Button>Login</Button>
+        <Button>
+          <Text>Login</Text>
+        </Button>
       </View>
     </KeyboardAvoidingView>
   );

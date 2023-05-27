@@ -25,6 +25,8 @@ export const Button = ({
   borderWidth,
   Mystyles
 }) => {
+  const theme = useAppTheme();
+  console.log(theme);
   return (
     <TouchableOpacity
       testID={testID}
@@ -36,10 +38,10 @@ export const Button = ({
         alignItems,
         alignSelf,
         flexDirection,
-        height,
-        width,
-        borderRadius,
-        backgroundColor,
+        height: 44,
+        width: 100,
+        borderRadius: theme.Radius.sm,
+        backgroundColor: theme.Colors.Primary,
         marginTop,
         marginRight,
         marginLeft,
@@ -81,9 +83,5 @@ Button.defaultProps = {
   justifyContent: 'center',
   alignItems: 'center',
   alignSelf: 'center',
-  width: 200,
-  height: 44,
-  borderRadius: useAppTheme().Radius.sm,
-  backgroundColor: useAppTheme().Primary,
   disabled: false
 };

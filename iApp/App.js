@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { store } from 'core/store';
-import { Provider } from 'react-redux';
+import { ThemeProvider } from 'core/theme';
 
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -9,9 +8,9 @@ import { AuthStackNavigator } from './core/routes/AuthStackNavigator';
 function App() {
   return (
     <NavigationContainer>
-      <Provider store={store}>
+      <ThemeProvider>
         <AuthStackNavigator />
-      </Provider>
+      </ThemeProvider>
     </NavigationContainer>
   );
 }
