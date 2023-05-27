@@ -2,7 +2,7 @@ import React, { createContext, useContext } from 'react';
 
 import { useColorScheme } from 'react-native';
 const ColorsLight = {
-  Primary: '#2E71F2',
+  Primary: '#A23CE1',
   Secondary: '#C3D8FF',
   Grey: '#C5C5C5',
   LightGrey: '#E6E6E6',

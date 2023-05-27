@@ -38,10 +38,10 @@ export const Button = ({
         alignItems,
         alignSelf,
         flexDirection,
-        height: 44,
-        width: 100,
-        borderRadius: theme.Radius.sm,
-        backgroundColor: theme.Colors.Primary,
+        height,
+        width,
+        borderRadius: borderRadius ? borderRadius : theme.Radius.sm,
+        backgroundColor: backgroundColor ? backgroundColor : theme.Colors.Primary,
         marginTop,
         marginRight,
         marginLeft,
@@ -83,5 +83,7 @@ Button.defaultProps = {
   justifyContent: 'center',
   alignItems: 'center',
   alignSelf: 'center',
-  disabled: false
+  disabled: false,
+  height: 44,
+  width: 280
 };

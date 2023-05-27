@@ -1,6 +1,4 @@
 import React from 'react';
-function IconCart() {
+export const IconCart = () => {
   return <></>;
-}
-
-export default IconCart;
+};

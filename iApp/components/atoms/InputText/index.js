@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { TextInput } from 'react-native';
 export const InputText = ({
   props,
+  secureTextEntry,
   stylesProps,
   fontSize,
   color,
@@ -61,6 +62,7 @@ export const InputText = ({
         borderWidth
       }}
       ref={compRef}
+      secureTextEntry={secureTextEntry}
       textAlign={align}
       placeholder={placeholder}
       placeholderTextColor={theme.Colors.LightGrey}
@@ -83,6 +85,7 @@ TextInput.propTypes = {
   stylesProps: PropTypes.object,
   fontSize: PropTypes.number,
   color: PropTypes.string,
+  secureTextEntry: PropTypes.string,
   fontWeight: PropTypes.string,
   fontStyle: PropTypes.string,
   marginVertical: PropTypes.number,
@@ -114,6 +117,7 @@ TextInput.propTypes = {
 };
 
 TextInput.defaultProps = {
+  secureTextEntry: false,
   width: '100%',
   fontWeight: '500',
   fontStyle: 'normal',

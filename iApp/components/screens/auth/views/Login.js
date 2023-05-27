@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { InputText, Text, Wrapper } from 'components/atoms';
+import { Box, Button, InputText, Text, Wrapper } from 'components/atoms';
+import Spacer from 'components/atoms/Spacer';
 import { AUTH_NAGINATIONS } from 'core/constants/routes';
 import { useAuthToken } from 'core/hooks';
 import { apiLogin } from 'core/services';
@@ -31,10 +32,20 @@ const LoginScreen = () => {
         flex: 1
       }}
     >
-      <Wrapper alignItems="center" justifyContent="center">
-        <Text fontSize={theme.FontSize.h2}>Login Screen {token}</Text>
+      <Wrapper alignItems="center" justifyContent="center" padding={36}>
+        <Text fontSize={theme.FontSize.h2}>Login {token}</Text>
+        <Spacer space={16} />
+        <Box mb={16}>
+          <InputText placeholder="Username" value={payload.username} />
+        </Box>
+        <Box mb={16}>
+          <InputText placeholder="Password" value={payload.password} secureTextEntry />
+        </Box>
+        <Button width="100%" height={44}>
+          <Text color="#fff">Login</Text>
+        </Button>
+        <Spacer />
         <Link to={LinkNavigate(AUTH_NAGINATIONS.REGISTER, {})}>Register</Link>
-        <InputText placeholder="Username" />
       </Wrapper>
     </KeyboardAvoidingView>
   );

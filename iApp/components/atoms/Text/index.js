@@ -39,9 +39,9 @@ export const Text = ({
       <TextElement
         numberOfLines={numberOfLines}
         style={{
-          fontSize,
+          fontSize: fontSize || theme.FontSize.md,
           fontWeight,
-          color: theme.Colors.Dark,
+          color: color || theme.Colors.Dark,
           margin,
           marginTop,
           marginLeft,
@@ -80,7 +80,6 @@ Text.propTypes = {
 };
 
 Text.defaultProps = {
-  fontSize: 22,
-  fontWeight: 'normal',
-  lineHeight: 54
+  fontWeight: '500',
+  lineHeight: 44
 };
