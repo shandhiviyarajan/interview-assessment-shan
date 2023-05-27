@@ -1,10 +1,8 @@
 import React from 'react';
+
+import { useAppTheme } from 'core/theme';
 import PropTypes from 'prop-types';
-import {TextInput as TextInputElement} from 'react-native';
-
-import {styles} from './TextInput.style';
-import {colors} from '../../constants/colors';
-
+import { TextInput as TextInputElement } from 'react-native';
 export const TextInput = ({
   props,
   stylesProps,
@@ -37,35 +35,35 @@ export const TextInput = ({
   autoFocus,
   marginRight,
   maxLength,
-  multiline,
+  multiline
 }) => {
+  const theme = useAppTheme();
   return (
     <TextInputElement
       style={{
-        ...styles.input,
         ...stylesProps,
-        fontSize,
+        fontSize: theme.FontSize.md,
         color,
         fontWeight,
         fontStyle,
         marginVertical,
         marginHorizontal,
-        padding,
-        borderRadius,
-        borderColor,
-        borderWidth,
-        shadowColor,
-        backgroundColor,
+        padding: theme.Gutters.md,
+        borderRadius: theme.Radius.sm,
+        borderColor: theme.Colors.Grey,
+        shadowColor: theme.Colors.Dark,
+        backgroundColor: theme.Colors.Light,
         width,
         height,
         marginBottom,
         marginLeft,
         marginRight,
+        borderWidth
       }}
       ref={compRef}
       textAlign={align}
       placeholder={placeholder}
-      placeholderTextColor={placeholderTextColor}
+      placeholderTextColor={theme.Colors.LightGrey}
       value={value}
       onChangeText={onChangeText}
       returnKeyType={returnKeyType}
@@ -112,24 +110,17 @@ TextInput.propTypes = {
   autoFocus: PropTypes.bool,
   marginRight: PropTypes.number,
   maxLength: PropTypes.number,
-  multiline: PropTypes.bool,
+  multiline: PropTypes.bool
 };
 
 TextInput.defaultProps = {
-  fontSize: 14,
-  color: colors.lightBlack,
+  width: '100%',
   fontWeight: '500',
   fontStyle: 'normal',
   marginVertical: 0,
-  padding: 10,
-  backgroundColor: colors.offWhite,
-  borderRadius: 4,
-  borderColor: colors.offWhite,
-  borderWidth: 0,
-  shadowColor: colors.black,
+  borderWidth: 1,
   align: 'left',
   value: '',
   placeholder: 'Placeholder',
-  placeholderTextColor: colors.gray,
-  keyboardType: 'default',
+  keyboardType: 'default'
 };

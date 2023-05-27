@@ -24,10 +24,10 @@ const Gutters = {
   Padding: 8,
   Margin: 8,
   sm: 8,
-  md: 16,
-  lg: 24,
-  xl: 32,
-  xxl: 40
+  md: 12,
+  lg: 18,
+  xl: 24,
+  xxl: 36
 };
 
 const FontSize = {
