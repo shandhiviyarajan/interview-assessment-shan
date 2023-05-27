@@ -27,7 +27,7 @@ It provides a clear and organized structure, core dependencies to open the asses
 
 ## 🚀 Running the App
 
-You can start by cloning this repository and using [react-native-rename](https://github.com/junedomingo/react-native-rename). In the current state of this project, it should give you no issues at all, just run the script, delete your node modules and reinstall them and you should be good to go.
+You can start by cloning this repository and using [assessment-shan](https://github.com/shandhiviyarajan/interview-assessment-shan). In the current state of this project, it should give you no issues at all, just run the script, delete your node modules and reinstall them and you should be good to go.
 
 - [Clone the Repository](https://github.com/shandhiviyarajan/interview-assessment-shan)
 - Run `cd iApp` then `yarn` to install node dependancies
