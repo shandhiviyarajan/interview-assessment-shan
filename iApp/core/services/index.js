@@ -1,10 +1,6 @@
 import { httpClient } from 'core/interceptors';
-const AUTH = {
-  LOGIN: '/auth/login'
-};
-const PRODUCTS = {
-  GET: '/products'
-};
+
+import { AUTH, PRODUCTS } from './api';
 //login
 const apiLogin = async (data) => {
   const response = await httpClient().post(AUTH.LOGIN, data);
