@@ -7,12 +7,12 @@ const LinkNavigate = (screenName, params) => {
 };
 
 const setAuthToken = (value) => {
-  AsyncStorage.setItem('token', value);
+  AsyncStorage.setItem('token', JSON.stringify(value));
 };
 
 const getAuthToken = async (value) => {
   const response = await AsyncStorage.getItem('token');
-  return response;
+  return JSON.parse(response) || false;
 };
 
 const clearToken = () => {

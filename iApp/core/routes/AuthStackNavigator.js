@@ -12,16 +12,16 @@ import { AppTabNavigator } from './AppTabNavigator';
 const Stack = createStackNavigator();
 
 export const AuthStackNavigator = () => {
-  const auth = useSelector((state) => state.auth);
-  console.log('auth', auth);
-  const { token, isLoading } = useAuth();
+  const auth = useSelector((state) => state.user.auth);
+  console.log(auth);
+  const { user, isLoading } = useAuth();
 
   return (
     <>
       {isLoading && <Wait />}
       {!isLoading && (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-          {token ? (
+          {auth && auth.token ? (
             <>
               <Stack.Screen name={TAB_NAVIGATIONS.NAME} component={AppTabNavigator} options={{ headerShown: false }} />
               <Stack.Screen name={TAB_NAVIGATIONS.CART} component={CartPage} options={{ headerShown: false }} />

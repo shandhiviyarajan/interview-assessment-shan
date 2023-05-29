@@ -26,13 +26,14 @@ const authSlice = createSlice({
     actionLoginSuccess: (state, action) => {
       console.log('success', action.payload);
       state.auth = {
-        token: action.payload.token,
+        token: action.payload?.token,
         data: action.payload,
         isLoading: true,
         error: null
       };
       //set auth token
-      setAuthToken(action.payload?.token);
+
+      setAuthToken(action.payload);
     },
 
     actionLoginFail: (state, action) => {
