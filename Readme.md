@@ -60,10 +60,8 @@ This template follows a very simple project structure:
 
 ## Setup environments
 
-DEV: `.env` `yarn ios` or `yarn android`
+DEV: `.env` `yarn ios` or `yarn android` (Not created) 
 
 STG: Not available
 
 PROD: Not available
-
-## Generate production version
