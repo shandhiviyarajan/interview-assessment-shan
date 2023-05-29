@@ -23,7 +23,6 @@ It provides a clear and organized structure, core dependencies to open the asses
 - [React Native version 0.66.1](https://reactnative.dev)
 - [react-navigation](https://reactnavigation.org/) navigation library.
 - [redux](https://redux.js.org/) for state management.
-- [redux-persist](https://github.com/rt2zz/redux-persist) as persistance layer.
 
 ## 🚀 Running the App
 
