@@ -7,6 +7,9 @@ import { apiLogin } from 'core/services';
 import { useAppTheme } from 'core/theme';
 import { LinkNavigate } from 'core/utils/helper';
 import { KeyboardAvoidingView, Platform } from 'react-native';
+import { useDispatch } from 'react-redux';
+
+import { actionLogin } from '../redux/authSlice';
 const LoginScreen = () => {
   //app theme
   const theme = useAppTheme();
@@ -14,15 +17,19 @@ const LoginScreen = () => {
   //token
   const token = useAuthToken();
 
+  const dispatchAction = useDispatch();
+
   const [payload, setPayload] = React.useState({
     username: 'kminchelle',
     password: '0lelplR'
   });
 
-  const submitLogin = () => {
+  const submit = () => {
     apiLogin(payload).then((response) => {
       console.log(response.token);
     });
+
+    dispatchAction(actionLogin(payload));
   };
 
   return (
@@ -48,7 +55,7 @@ const LoginScreen = () => {
         <Text color={Colors.Dark}>Don't have an account ?</Text>
         <Spacer space={10} />
 
-        <Button width="100%" height={44} backgroundColor={Colors.Secondary}>
+        <Button width="100%" height={44} backgroundColor={Colors.Secondary} onPress={submit}>
           <Text color={Colors.Primary}>Register</Text>
         </Button>
         <Spacer />

@@ -1,19 +1,19 @@
+import { apiLogin } from 'core/services';
 import { put, retry, takeLatest } from 'redux-saga/effects';
 
-import { getProfile } from '../../../../core/services/user/userService';
-import { getProfileFail, getProfileSuccess } from '../redux/userProfileSlice';
-function* getProfileWorker() {
+import { actionLoginFail, actionLoginSuccess } from '../redux/authSlice';
+function* authWorker() {
   try {
-    const user = yield retry(3, 100, getProfile);
-    yield put(getProfileSuccess(user));
+    const response = yield retry(3, 100, apiLogin);
+    yield put(actionLoginSuccess(response));
   } catch (error) {
     console.log(error);
-    yield put(getProfileFail('Error Fetching User'));
+    yield put(actionLoginFail('Error Fetching User'));
   }
 }
 
-function* ProfileSaga() {
-  yield takeLatest('userProfile/getUserRequest', getProfileWorker);
+function* AuthSaga() {
+  yield takeLatest('authSlicer/actionLogin', authWorker);
 }
 
-export default ProfileSaga;
+export default AuthSaga;

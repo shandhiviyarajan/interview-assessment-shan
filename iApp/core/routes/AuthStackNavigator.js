@@ -9,7 +9,7 @@ import { AppTabNavigator } from './AppTabNavigator';
 const Stack = createStackNavigator();
 
 export const AuthStackNavigator = () => {
-  const accessToken = true;
+  const accessToken = false;
 
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>

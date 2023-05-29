@@ -11,7 +11,7 @@ const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    login: (state) => {
+    actionLogin: (state) => {
       state.auth = {
         data: null,
         isLoading: true,
@@ -19,7 +19,7 @@ const authSlice = createSlice({
       };
     },
 
-    loginSuccess: (state, action) => {
+    actionLoginSuccess: (state, action) => {
       state.auth = {
         data: action.payload,
         isLoading: true,
@@ -27,7 +27,7 @@ const authSlice = createSlice({
       };
     },
 
-    loginFailed: (state, action) => {
+    actionLoginFail: (state, action) => {
       state.auth = {
         data: null,
         isLoading: false,
