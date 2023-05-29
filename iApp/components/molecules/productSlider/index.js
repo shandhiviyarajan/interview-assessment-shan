@@ -1,18 +1,21 @@
 import React from 'react';
 
 import FastImage from 'react-native-fast-image';
-const ProductSlider = () => {
+import PagerView from 'react-native-pager-view';
+const ProductSlider = ({ data }) => {
   return (
-    <>
-      <FastImage
-        style={{ width: '100%', height: 200 }}
-        source={{
-          uri: 'https://placehold.co/600x400.png',
-          priority: FastImage.priority.normal
-        }}
-        resizeMode={FastImage.resizeMode.cover}
-      />
-    </>
+    <PagerView style={{ height: 200, width: '100%' }} initialPage={0}>
+      {data.map((url) => (
+        <FastImage
+          style={{ width: '100%', height: 200 }}
+          source={{
+            uri: url,
+            priority: FastImage.priority.normal
+          }}
+          resizeMode={FastImage.resizeMode.cover}
+        />
+      ))}
+    </PagerView>
   );
 };
 

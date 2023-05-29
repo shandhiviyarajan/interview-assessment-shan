@@ -3,16 +3,18 @@ import React from 'react';
 import { ProductItem } from 'components/molecules';
 
 import { ProductListStyled } from './productList.styled';
-export const ProductsList = () => {
+export const ProductsList = ({ products }) => {
   const getItem = (data, index) => {
-    return data;
+    return data[index];
   };
+
   return (
     <ProductListStyled
-      initialNumToRender={6}
-      renderItem={({ item }) => <ProductItem />}
-      keyExtractor={(item) => item}
-      getItemCount={() => 10}
+      data={products?.products}
+      initialNumToRender={10}
+      renderItem={({ item }) => <ProductItem item={item} />}
+      keyExtractor={(item) => item.id}
+      getItemCount={() => products?.products.length}
       getItem={getItem}
     />
   );

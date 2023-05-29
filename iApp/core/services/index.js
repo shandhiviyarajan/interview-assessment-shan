@@ -16,6 +16,7 @@ const apiFetchProducts = async () => {
 //fetch product with product id
 const apiFetchProduct = async (payload) => {
   const response = await httpClient().get(`${PRODUCTS.GET}/${payload}`);
+  console.log(response);
   return response;
 };
 

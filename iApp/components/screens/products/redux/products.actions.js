@@ -20,10 +20,9 @@ const productsSlice = createSlice({
     },
 
     actionFetchProductsSuccess: (state, action) => {
-      console.log('success', action.payload);
       state.products = {
         data: action.payload,
-        isLoading: true,
+        isLoading: false,
         error: null
       };
     },

@@ -11,7 +11,8 @@ const productSlice = createSlice({
   name: 'product',
   initialState,
   reducers: {
-    actionFetchProduct: (state) => {
+    actionFetchProduct: (state, action) => {
+      console.log(action.payload);
       state.product = {
         data: null,
         isLoading: true,
@@ -20,10 +21,9 @@ const productSlice = createSlice({
     },
 
     actionFetchProductSuccess: (state, action) => {
-      console.log('success', action.payload);
       state.product = {
         data: action.payload,
-        isLoading: true,
+        isLoading: false,
         error: null
       };
     },

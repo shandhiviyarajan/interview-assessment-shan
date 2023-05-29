@@ -31,10 +31,9 @@ export const Text = ({
   return (
     <View
       style={{
-        flex: 1,
+        flex,
         alignItems,
-        justifyContent,
-        flex
+        justifyContent
       }}
     >
       <TextElement
@@ -85,5 +84,6 @@ Text.propTypes = {
 
 Text.defaultProps = {
   fontWeight: '500',
-  lineHeight: 0
+  lineHeight: 0,
+  textAlign: 'left'
 };

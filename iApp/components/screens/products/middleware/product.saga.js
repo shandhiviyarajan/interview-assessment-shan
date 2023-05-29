@@ -1,3 +1,4 @@
+import { apiFetchProduct } from 'core/services';
 import { put, retry, takeLatest } from 'redux-saga/effects';
 
 import { actionFetchProductFail, actionFetchProductSuccess } from '../redux/product.actions';
@@ -11,7 +12,7 @@ function* productWorker(action) {
 }
 
 function* ProductSaga() {
-  yield takeLatest('products/actionFetchProduct', productWorker);
+  yield takeLatest('product/actionFetchProduct', productWorker);
 }
 
 export default ProductSaga;
