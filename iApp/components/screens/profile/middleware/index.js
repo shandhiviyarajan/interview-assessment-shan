@@ -1,4 +1,4 @@
 import UserSaga from './user.saga';
-const UsersSaga = [UserSaga()];
+const ProfileSagas = [UserSaga()];
 
-export default UsersSaga;
+export default ProfileSagas;

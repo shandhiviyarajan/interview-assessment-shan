@@ -1,5 +1,5 @@
 import ProductSaga from './product.saga';
 import ProductsSaga from './products.saga';
-const ProductsSaga = [ProductsSaga(), ProductSaga()];
+const AllProductSagas = [ProductsSaga(), ProductSaga()];
 
-export default ProductsSaga;
+export default AllProductSagas;

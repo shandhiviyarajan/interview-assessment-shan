@@ -1,6 +1,6 @@
 import { httpClient } from 'core/interceptors';
 
-import { AUTH, PRODUCTS } from './api';
+import { AUTH, PRODUCTS, USERS } from './api';
 //login
 const apiLogin = async (payload) => {
   const response = await httpClient().post(AUTH.LOGIN, payload);
@@ -8,20 +8,22 @@ const apiLogin = async (payload) => {
 };
 
 //fetch products
-const apiFetchProducts = async (data) => {
+const apiFetchProducts = async () => {
   const response = await httpClient().get(PRODUCTS.GET);
   return response;
 };
 
 //fetch product with product id
-const apiFetchProduct = async (id) => {
-  const response = await httpClient().get(`${PRODUCTS.GET}/${id}`);
+const apiFetchProduct = async (payload) => {
+  const response = await httpClient().get(`${PRODUCTS.GET}/${payload}`);
   return response;
 };
 
 //fetch users with user id
-const apiGetUser = async (id) => {
-  const response = await httpClient().get(`${USERS.GET}/${id}`);
+const apiGetUser = async (payload) => {
+  const response = await httpClient().get(`${USERS.GET}/${payload}`);
+
+  console.log(response);
   return response;
 };
 export { apiFetchProduct, apiFetchProducts, apiGetUser, apiLogin };

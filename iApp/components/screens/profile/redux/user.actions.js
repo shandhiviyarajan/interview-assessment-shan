@@ -11,7 +11,8 @@ const profileSlice = createSlice({
   name: 'profile',
   initialState,
   reducers: {
-    actionFetchUser: (state) => {
+    actionFetchUser: (state, action) => {
+      console.log('userid', action.payload);
       state.profile = {
         data: null,
         isLoading: true,
@@ -20,10 +21,9 @@ const profileSlice = createSlice({
     },
 
     actionFetchUserSuccess: (state, action) => {
-      console.log('success', action.payload);
       state.profile = {
         data: action.payload,
-        isLoading: true,
+        isLoading: false,
         error: null
       };
     },

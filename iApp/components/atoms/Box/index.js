@@ -9,6 +9,7 @@ export const Box = ({
   alignItems = 'flex-start',
   alignContent = 'flex-start',
   backgroundColor,
+  direction = 'column',
   pb = 0,
   pt = 0,
   pr = 0,
@@ -26,6 +27,7 @@ export const Box = ({
   return (
     <View
       style={{
+        flexDirection: direction,
         width,
         justifyContent,
         alignContent,

@@ -9,4 +9,4 @@ const USERS = {
   GET: '/users'
 };
 
-export { AUTH, PRODUCTS };
+export { AUTH, PRODUCTS, USERS };
