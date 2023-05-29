@@ -1,9 +1,8 @@
 import React from 'react';
 
 import { Box, Button, InputText, NavLink, Spacer, Text, Wrapper } from 'components/atoms';
-import { AUTH_NAGINATIONS } from 'core/constants/routes';
+import { AUTH_NAVIGATIONS } from 'core/constants/routes';
 import { useAuthToken } from 'core/hooks';
-import { apiLogin } from 'core/services';
 import { useAppTheme } from 'core/theme';
 import { LinkNavigate } from 'core/utils/helper';
 import { KeyboardAvoidingView, Platform } from 'react-native';
@@ -25,10 +24,6 @@ const LoginScreen = () => {
   });
 
   const submit = () => {
-    apiLogin(payload).then((response) => {
-      console.log(response.token);
-    });
-
     dispatchAction(actionLogin(payload));
   };
 
@@ -48,18 +43,18 @@ const LoginScreen = () => {
         <Box mb={16}>
           <InputText placeholder="Password" value={payload.password} secureTextEntry />
         </Box>
-        <Button width="100%" height={44}>
+        <Button width="100%" height={44} onPress={submit}>
           <Text color="#fff">Login</Text>
         </Button>
         <Spacer space={10} />
         <Text color={Colors.Dark}>Don't have an account ?</Text>
         <Spacer space={10} />
 
-        <Button width="100%" height={44} backgroundColor={Colors.Secondary} onPress={submit}>
+        <Button width="100%" height={44} backgroundColor={Colors.Secondary}>
           <Text color={Colors.Primary}>Register</Text>
         </Button>
         <Spacer />
-        <NavLink to={LinkNavigate(AUTH_NAGINATIONS.REGISTER, {})}>Forgot Password ?</NavLink>
+        <NavLink to={LinkNavigate(AUTH_NAVIGATIONS.FORGOT_PASSWORD, {})}>Forgot Password ?</NavLink>
       </Wrapper>
     </KeyboardAvoidingView>
   );

@@ -2,8 +2,8 @@ import { httpClient } from 'core/interceptors';
 
 import { AUTH, PRODUCTS } from './api';
 //login
-const apiLogin = async (data) => {
-  const response = await httpClient().post(AUTH.LOGIN, data);
+const apiLogin = async (payload) => {
+  const response = await httpClient().post(AUTH.LOGIN, payload);
   return response;
 };
 

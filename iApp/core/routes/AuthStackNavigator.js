@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { AUTH_NAVIGATIONS, TAB_NAVIGATIONS } from 'core/constants/routes';
-import { CartPage, CheckoutPage, ForgotPassword, LoginScreen, RegisterScreen } from 'screens';
+import { CartPage, CheckoutPage, ForgotPassword, LoginScreen, RegisterScreen, ResetPasswordPage } from 'screens';
 
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -16,7 +16,7 @@ export const AuthStackNavigator = () => {
       {accessToken ? (
         <>
           <Stack.Screen name={TAB_NAVIGATIONS.NAME} component={AppTabNavigator} options={{ headerShown: false }} />
-          <Stack.Screen name={TAB_NAVIGATIONS.CART + 'X'} component={CartPage} options={{ headerShown: false }} />
+          <Stack.Screen name={TAB_NAVIGATIONS.CART} component={CartPage} options={{ headerShown: false }} />
           <Stack.Screen
             name={TAB_NAVIGATIONS.CHECKOUT}
             component={CheckoutPage}
@@ -30,6 +30,11 @@ export const AuthStackNavigator = () => {
           <Stack.Screen
             name={AUTH_NAVIGATIONS.FORGOT_PASSWORD}
             component={ForgotPassword}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name={AUTH_NAVIGATIONS.RESET_PASSWORD}
+            component={ResetPasswordPage}
             options={{ headerShown: false }}
           />
         </>

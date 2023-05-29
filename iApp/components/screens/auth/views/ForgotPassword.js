@@ -1,21 +1,18 @@
 import React from 'react';
 
-import { AUTH_NAGINATIONS } from 'core/constants/routes';
-import { useAuthToken } from 'core/hooks';
+import { NavLink, Text, Wrapper } from 'components/atoms';
+import { AUTH_NAVIGATIONS } from 'core/constants/routes';
+import { useAppTheme } from 'core/theme';
 import { LinkNavigate } from 'core/utils/helper';
-import {
-  Text,
-  View
-} from 'react-native';
-
-import { Link } from '@react-navigation/native';
 const ForgotPassword = () => {
-  const token = useAuthToken();
+  const { FontSize } = useAppTheme();
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text style={{ fontSize: 24 }}>Login Screen {token}</Text>
-      <Link to={LinkNavigate(AUTH_NAGINATIONS.LOGIN, {})}>Login</Link>
-    </View>
+    <Wrapper justifyContent="center" alignItems="center">
+      <Text fontSize={FontSize.h2} style={{ fontSize: 24 }}>
+        Forgot Password
+      </Text>
+      <NavLink to={LinkNavigate(AUTH_NAVIGATIONS.LOGIN, {})}>Login</NavLink>
+    </Wrapper>
   );
 };
 

@@ -1,4 +1,4 @@
-import UserSaga from './user.saga';
-const AuthSagas = [UserSaga()];
+import AuthSaga from './auth.saga';
+const AuthSagas = [AuthSaga()];
 
 export default AuthSagas;

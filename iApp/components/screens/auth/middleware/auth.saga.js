@@ -2,9 +2,9 @@ import { apiLogin } from 'core/services';
 import { put, retry, takeLatest } from 'redux-saga/effects';
 
 import { actionLoginFail, actionLoginSuccess } from '../redux/authSlice';
-function* authWorker() {
+function* authWorker(action) {
   try {
-    const response = yield retry(3, 100, apiLogin);
+    const response = yield retry(3, 100, apiLogin, action.payload);
     yield put(actionLoginSuccess(response));
   } catch (error) {
     console.log(error);
@@ -13,7 +13,7 @@ function* authWorker() {
 }
 
 function* AuthSaga() {
-  yield takeLatest('authSlicer/actionLogin', authWorker);
+  yield takeLatest('auth/actionLogin', authWorker);
 }
 
 export default AuthSaga;

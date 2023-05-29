@@ -1,9 +1,12 @@
-/**
- * @format
- */
+import React from 'react';
 
-import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
+import { Text, Wrapper } from 'components/atoms';
+const ResetPasswordPage = () => {
+  return (
+    <Wrapper>
+      <Text>Reset Password</Text>
+    </Wrapper>
+  );
+};
 
-AppRegistry.registerComponent(appName, () => App);
+export default ResetPasswordPage;
