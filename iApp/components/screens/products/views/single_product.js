@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { AppSlider, Box, Button, Spacer, Text, Wrapper } from 'components/atoms';
-import { FeedbackStars, ProductSlider } from 'components/molecules';
+import { FeedbackStars, ProductSlider, Wait } from 'components/molecules';
 import { actionAddToCart } from 'components/screens/cart/redux/cart.actions';
 import { TAB_NAVIGATIONS } from 'core/constants/routes';
 import { useAppTheme } from 'core/theme';
@@ -14,7 +14,6 @@ function SingleProductPage({ navigation }) {
   const { FontSize, Colors, Gutters } = useAppTheme();
   //@TODO clean selectors
   const { data, isLoading } = useSelector((state) => state.product.product);
-  const cartItems = useSelector((state) => state.cart.cart);
   const [qty, setQty] = React.useState(1);
   const { params } = useRoute();
   const dispatchAction = useDispatch();
@@ -28,32 +27,12 @@ function SingleProductPage({ navigation }) {
   const addToCart = () => {
     navigation.jumpTo(TAB_NAVIGATIONS.CART);
 
-    if (cartItems.length) {
-      let updatedCart =
-        cartItems.length > 0 &&
-        cartItems.map((ci) => {
-          if (ci.product.id === params.product.id) {
-            return {
-              product: params.product,
-              qty: ci.qty + qty
-            };
-          } else {
-            return ci;
-          }
-        });
-
-      dispatchAction(actionAddToCart(updatedCart));
-    } else {
-      dispatchAction(
-        actionAddToCart([
-          ...cartItems,
-          {
-            product: params.product,
-            qty
-          }
-        ])
-      );
-    }
+    dispatchAction(
+      actionAddToCart({
+        product: params.product,
+        qty
+      })
+    );
   };
 
   const onValueChange = (value) => {
@@ -61,7 +40,6 @@ function SingleProductPage({ navigation }) {
   };
   return (
     <>
-      {<Text>{JSON.stringify(cartItems)}</Text>}
       {isLoading && <Wait />}
       {!isLoading && data && <ProductSlider data={data.images} />}
       {!isLoading && (

@@ -19,4 +19,4 @@ const FeedbackStars = ({ rating }) => {
   );
 };
 
-export default FeedbackStars;
+export { FeedbackStars };
