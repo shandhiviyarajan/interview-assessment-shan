@@ -8,7 +8,7 @@ function* authWorker(action) {
     yield put(actionLoginSuccess(response));
   } catch (error) {
     console.log(error);
-    yield put(actionLoginFail('Error Fetching User'));
+    yield put(actionLoginFail(error));
   }
 }
 

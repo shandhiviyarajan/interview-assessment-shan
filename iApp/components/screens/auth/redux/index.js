@@ -1,6 +1,6 @@
 import authSlice from './authSlice';
 const AuthReducers = {
-  auth: authSlice
+  user: authSlice
 };
 
 export default AuthReducers;

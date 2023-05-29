@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Box, Button, InputText, NavLink, Spacer, Text, Wrapper } from 'components/atoms';
 import { AUTH_NAVIGATIONS } from 'core/constants/routes';
-import { useAuthToken } from 'core/hooks';
 import { useAppTheme } from 'core/theme';
 import { LinkNavigate } from 'core/utils/helper';
 import { KeyboardAvoidingView, Platform } from 'react-native';
@@ -13,8 +12,6 @@ const LoginScreen = () => {
   //app theme
   const theme = useAppTheme();
   const { Colors } = theme;
-  //token
-  const token = useAuthToken();
 
   const dispatchAction = useDispatch();
 
@@ -35,7 +32,7 @@ const LoginScreen = () => {
       }}
     >
       <Wrapper alignItems="center" justifyContent="center" padding={36}>
-        <Text fontSize={theme.FontSize.h2}>Login {token}</Text>
+        <Text fontSize={theme.FontSize.h2}>Login</Text>
         <Spacer space={12} />
         <Box mb={16}>
           <InputText placeholder="Username" value={payload.username} />

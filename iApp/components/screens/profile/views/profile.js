@@ -1,10 +1,15 @@
 import React from 'react';
 
 import { Box, Button, Text, Wrapper } from 'components/atoms';
+import { logoutUser } from 'components/screens/auth/redux/authSlice';
 import { useAppTheme } from 'core/theme';
+import { useDispatch } from 'react-redux';
 const ProfilePage = () => {
   const { Colors, Gutters } = useAppTheme();
-  const logout = () => {};
+  const dispatchAction = useDispatch();
+  const logout = () => {
+    dispatchAction(logoutUser());
+  };
   return (
     <Wrapper paddingH={Gutters.xl}>
       <Box flex={3}>

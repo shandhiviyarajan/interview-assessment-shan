@@ -85,7 +85,7 @@ TextInput.propTypes = {
   stylesProps: PropTypes.object,
   fontSize: PropTypes.number,
   color: PropTypes.string,
-  secureTextEntry: PropTypes.string,
+  secureTextEntry: PropTypes.bool,
   fontWeight: PropTypes.string,
   fontStyle: PropTypes.string,
   marginVertical: PropTypes.number,

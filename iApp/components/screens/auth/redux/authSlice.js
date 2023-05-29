@@ -1,9 +1,12 @@
+import { clearToken, setAuthToken } from 'core/utils/helper';
+
 import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   auth: {
     token: null,
     isLoading: false,
-    error: null
+    error: null,
+    data: null
   }
 };
 
@@ -15,7 +18,8 @@ const authSlice = createSlice({
       state.auth = {
         data: null,
         isLoading: true,
-        error: null
+        error: null,
+        token: null
       };
     },
 
@@ -27,17 +31,26 @@ const authSlice = createSlice({
         isLoading: true,
         error: null
       };
+      //set auth token
+      setAuthToken(action.payload?.token);
     },
 
     actionLoginFail: (state, action) => {
       state.auth = {
         data: null,
         isLoading: false,
-        error: action.payload
+        error: action.payload,
+        token: null
       };
     },
-    logoutUser: () => {
-      return initialState;
+    logoutUser: (state) => {
+      clearToken();
+      state.auth = {
+        data: null,
+        isLoading: false,
+        error: null,
+        token: null
+      };
     }
   }
 });

@@ -3,17 +3,26 @@ import React from 'react';
 
 import { getAuthToken } from 'core/utils/helper';
 //get auth token
-const useAuthToken = () => {
-  const [token, setToken] = React.useState(null);
+const useAuth = () => {
+  const [auth, setToken] = React.useState({
+    token: null,
+    isLoading: true
+  });
 
   React.useEffect(() => {
     const getToken = async () => {
-      const value = getAuthToken();
-      setToken(value);
+      const value = await getAuthToken();
+      console.log('vlaue', value);
+      setTimeout(() => {
+        setToken({
+          token: value,
+          isLoading: false
+        });
+      }, 3000);
     };
     getToken();
   }, []);
-  return token;
+  return auth;
 };
 
-export { useAuthToken };
+export { useAuth };

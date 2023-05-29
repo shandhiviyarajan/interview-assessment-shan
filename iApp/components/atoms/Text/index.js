@@ -31,7 +31,7 @@ export const Text = ({
   return (
     <View
       style={{
-        ...styles.container,
+        flex: 1,
         alignItems,
         justifyContent,
         flex

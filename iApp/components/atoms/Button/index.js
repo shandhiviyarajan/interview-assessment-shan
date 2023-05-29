@@ -25,7 +25,6 @@ export const Button = ({
   style
 }) => {
   const theme = useAppTheme();
-  console.log(theme);
   return (
     <TouchableOpacity
       onPress={onPress}

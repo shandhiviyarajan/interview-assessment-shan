@@ -11,7 +11,7 @@ const setAuthToken = (value) => {
 };
 
 const getAuthToken = async (value) => {
-  const response = await AsyncStorage.setItem('token', value);
+  const response = await AsyncStorage.getItem('token');
   return response;
 };
 

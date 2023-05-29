@@ -5,9 +5,9 @@ import { View } from 'react-native';
 export const Wrapper = ({
   children,
   flex = 1,
-  justifyContent = 'flex-start',
-  alignItems = 'flex-start',
-  alignContent = 'flex-start',
+  justifyContent,
+  alignItems,
+  alignContent,
   backgroundColor,
   padding,
   paddingH,
@@ -32,4 +32,10 @@ export const Wrapper = ({
       {children}
     </View>
   );
+};
+
+Wrapper.defaultProps = {
+  justifyContent: 'flex-start',
+  alignItems: 'flex-start',
+  alignContent: 'flex-start'
 };
