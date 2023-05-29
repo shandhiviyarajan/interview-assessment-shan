@@ -12,7 +12,7 @@ function SingleProductPage({ navigation }) {
     });
   };
   return (
-    <Wrapper justifyContent="center" alignItems="center">
+    <Wrapper>
       <ProductSlider />
       <Button onPress={() => addToCart()}>
         <Text color={Colors.Light}>Add to cart</Text>
