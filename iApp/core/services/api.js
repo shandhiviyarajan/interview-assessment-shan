@@ -5,4 +5,8 @@ const PRODUCTS = {
   GET: '/products'
 };
 
+const USERS = {
+  GET: '/users'
+};
+
 export { AUTH, PRODUCTS };

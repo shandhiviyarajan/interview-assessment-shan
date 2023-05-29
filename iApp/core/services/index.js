@@ -12,4 +12,16 @@ const apiFetchProducts = async (data) => {
   const response = await httpClient().get(PRODUCTS.GET);
   return response;
 };
-export { apiFetchProducts, apiLogin };
+
+//fetch product with product id
+const apiFetchProduct = async (id) => {
+  const response = await httpClient().get(`${PRODUCTS.GET}/${id}`);
+  return response;
+};
+
+//fetch users with user id
+const apiGetUser = async (id) => {
+  const response = await httpClient().get(`${USERS.GET}/${id}`);
+  return response;
+};
+export { apiFetchProduct, apiFetchProducts, apiGetUser, apiLogin };

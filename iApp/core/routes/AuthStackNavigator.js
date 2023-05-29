@@ -13,8 +13,7 @@ const Stack = createStackNavigator();
 
 export const AuthStackNavigator = () => {
   const auth = useSelector((state) => state.user.auth);
-  console.log(auth);
-  const { user, isLoading } = useAuth();
+  const { isLoading } = useAuth();
 
   return (
     <>
