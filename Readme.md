@@ -2,10 +2,37 @@
 
 ## 27th May - 2023
 
+      !
+      !
+      ^ 
+     / \ 
+    /___\
+    |= =| 
+    |   |
+    |   | 
+    | S | 
+    | H | 
+    | A | 
+    | N | 
+    |   | 
+    |   |  
+    |   |
+  /|##!##|\
+ / |##!##| \
+/  |##!##|  \
+| / ^ | ^ \ |
+| / ( | ) \ |
+|/  ( | ) \| 
+    (( )) 
+   (( : )) 
+   (( : )) 
+    (( )) 
+     ( ) 
+      . 
+      . 
+      .
     
-       !
-       !
-       ^                  Welcome to the Explorer!      / \                 Here are some common reasons for connection issues:      /___\                |=   =|                |     |               Connection Refused:    |  A  |               - Is your GraphQL endpoint served at /graphql or /api/graphql?    |  P  |               - Is your server running at https://dev-api.getbloom.com.au?     |  O  |                    |  L  |               CORS Errors:     |  L  |               - Is your endpoint sending CORS headers for studio.apollographql.com?    |  O  |                    |     |               Authentication:    |     |               - Does your endpoint require authentication?   /|##!##|\                / |##!##| \               /  |##!##|  \|  / ^ | ^ \  || /  ( | )  \ ||/   ( | )   \|    ((   ))   ((  :  ))   ((  :  ))    ((   ))     (( ))      ( )       .       .       .
+
 #### [prashasoft@gmail.com](mailto:prashasoft@gmail.com)
 
 #### +94 77 977 3225
