@@ -1,44 +1,44 @@
 # React Native - Assessment Shan
 
 ## 27th May - 2023
-`
-      `!`
-      `!`
-      `^` 
-     `/ \`
-    `/___\`
-    `|= =|`
-    `|   |`
-    `|   |` 
-    `| S |` 
-    `| H |` 
-    `| A |` 
-    `| N |`
-    `|   |` 
-    `|   |`  
-    `|   |`
-  `/|##!##|\`
- `/ |##!##| \`
-`/  |##!##|  \`
-`| / ^ | ^ \ |`
-`| / ( | ) \ |`
-`|/  ( | ) \|` 
-    `(( ))`
-   `(( : ))`
-   `(( : ))`
-    `(( ))` 
-     `( )`
-      `.`
-      `.` 
-      `.`
-`
 
 #### [prashasoft@gmail.com](mailto:prashasoft@gmail.com)
 
 #### +94 77 977 3225
 
 It provides a clear and organized structure, core dependencies to open the assessment development test.
+```
+      !
+      !
+      ^ 
+     / \ 
+    /___\
+    |= =| 
+    |   |
+    |   | 
+    | P | 
+    | O | 
+    | L | 
+    | L | 
+    | O | 
+    |   |  
+    |   |
+  /|##!##|\
+ / |##!##| \
+/  |##!##|  \
+| / ^ | ^ \ |
+| / ( | ) \ |
+|/  ( | ) \| 
+    (( )) 
+   (( : )) 
+   (( : )) 
+    (( )) 
+     ( ) 
+      . 
+      . 
+      .
 
+```
 ## 🫀 Prerequisites
 
 - [Node > 16.17.1](https://nodejs.org) and npm (Recommended: Use [nvm](https://github.com/nvm-sh/nvm))
